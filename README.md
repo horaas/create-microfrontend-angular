@@ -13,7 +13,7 @@ Iniciar con npm
 
 - Por otro lado generar las apps independientes
 ```bash
-  ng new app-mfe-1 && ng new app-mfe-1
+  ng new app-mfe-1 && ng new app-mfe-2
 ```
 - Seleccionar Y
 - Siguiente seleccionar Module Federation with webpack(classic)
@@ -86,11 +86,11 @@ module.exports = withModuleFederationPlugin({
     name: "appmfe2"
 
     exposes: {
-      './routes': '.src/app/app.routes
+      './routes': '.src/app/app.routes'
     }
     //si usa module
     exposes: {
-      './module': '.src/app/app.module.ts
+      './module': '.src/app/app.module.ts'
     }
     shared: shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' })
 
@@ -105,11 +105,11 @@ module.exports = withModuleFederationPlugin({
     name: "appmfe1"
 
     exposes: {
-      './routes': '.src/app/app.routes
+      './routes': '.src/app/app.routes'
     }
     //si usa module
     exposes: {
-      './module': '.src/app/app.module.ts
+      './module': '.src/app/app.module.ts'
     }
     shared: shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' })
 
@@ -119,6 +119,6 @@ module.exports = withModuleFederationPlugin({
 ## Parte final y probar el proyecto
 
 ```bash
-ng server [en cada uno de los microfrontend]
+ng serve [en cada uno de los microfrontend]
 ng serve host [en el host principal]
 ```
