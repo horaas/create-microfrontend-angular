@@ -17,7 +17,7 @@ Iniciar con npm
 A cada proyecto una agregar las siguientes configuraciones
 
 ```bash
-  ng add @angular-architects/module-federation --project mfe-host --port 4200
+  ng add @angular-architects/module-federation --project host --port 4200
   ng add @angular-architects/module-federation --project app-mfe-1 --port 4201
   ng add @angular-architects/module-federation --project app-mfe-2 --port 4202
 ``` 
