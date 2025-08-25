@@ -15,8 +15,6 @@ Iniciar con npm
 ```bash
   ng new app-mfe-1 && ng new app-mfe-2
 ```
-- Seleccionar Y
-- Siguiente seleccionar Module Federation with webpack(classic)
 ------
 
 A cada proyecto una agregar las siguientes configuraciones
@@ -25,7 +23,10 @@ A cada proyecto una agregar las siguientes configuraciones
   ng add @angular-architects/module-federation --project host --port 4200
   ng add @angular-architects/module-federation --project app-mfe-1 --port 4201
   ng add @angular-architects/module-federation --project app-mfe-2 --port 4202
-``` 
+```
+- Seleccionar Y
+- Siguiente seleccionar Module Federation with webpack(classic)
+
 ## En el archivo webpack.config de la app host agregar
 
 ```typescript
@@ -117,6 +118,7 @@ module.exports = withModuleFederationPlugin({
 
 ```
 ## Parte final y probar el proyecto
+- Antes de correr los microfrontend se debe configurar al menos una ruta en los proyectos microfrontend
 
 ```bash
 ng serve [en cada uno de los microfrontend]
